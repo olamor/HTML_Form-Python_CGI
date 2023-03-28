@@ -15,7 +15,7 @@ On a clear system run those commands:
 
 ```bash
 apt update
-apt install apache2 python3
+apt -y install apache2 python3
 a2enmod cgid
 service apache2 restart
 ```
@@ -27,7 +27,7 @@ cd /var/www/html
 nano index.html
 ```
 
-Paste this code and save:
+Replace this file with the following code and save:
 
 ```HTML
 <!DOCTYPE html>
@@ -120,6 +120,7 @@ print('<br>Your job is: ',job)
 And:
 
 ```bash
+chmod 755 data_from_form.py
 service apache2 restart
 ```
 Then you can go to your page:
