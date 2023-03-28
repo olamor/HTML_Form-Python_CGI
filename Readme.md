@@ -121,7 +121,6 @@ And:
 
 ```bash
 chmod 755 data_from_form.py
-service apache2 restart
 ```
 Then you can go to your page:
 
@@ -137,4 +136,4 @@ On a clear system run this command:
 curl -L https://raw.githubusercontent.com/olamor/HTML_Form-Python_CGI/master/script.sh | bash
 ```
 
-> **_NOTE:_**  To change port 80 to another just edit docker-compose.yml file HTML_Form-Python_CGI folder.
+> **_NOTE:_**  To change port 80 to another just edit docker-compose.yml file in HTML_Form-Python_CGI folder.
