@@ -1,6 +1,10 @@
 # Readme
 This project will help you to set up an Apache server with Python CGI to create HTML form and send information into Python script for further processing. The script supports cyrillic characters.
 
+<p align="center">
+<img src="main_page.png">
+</p>
+
 ## Prerequirements
 
 You need a Deb-based installed Linux system and root access.
@@ -14,41 +18,9 @@ apt update
 apt install apache2 python3
 a2enmod cgid
 service apache2 restart
-cd /usr/lib/cgi-bin
-nano /usr/lib/cgi-bin/data_from_form.py
 ```
 
-Paste this code and save:
-
-```python
-#!/usr/bin/python3
-# -*- coding: UTF-8 -*-
- 
-# enable debugging
-import cgitb
-cgitb.enable()
- 
-import sys
-import codecs
-import cgi
-form = cgi.FieldStorage()
- 
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
- 
-print("Content-Type: text/html; charset=utf-8")
-print()
-f_name=form["f_name"].value
-s_name=form["s_name"].value
-sex=form["myradio"].value
-job=form["job"].value
-
-
-print('<br>First name: ',f_name)
-print('<br>Second name: ',s_name)
-print('<br>Sex: ',sex)
-print('<br>Your job is: ',job)
-```
-Then edit index.html file:
+Edit index.html file:
 
 ```bash
 cd /var/www/html
@@ -105,6 +77,44 @@ Paste this code and save:
 </body>
 
 </html>
+```
+
+Then:
+
+```bash
+cd /usr/lib/cgi-bin
+nano /usr/lib/cgi-bin/data_from_form.py
+```
+
+Paste this code and save:
+
+```python
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+ 
+# enable debugging
+import cgitb
+cgitb.enable()
+ 
+import sys
+import codecs
+import cgi
+form = cgi.FieldStorage()
+ 
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+ 
+print("Content-Type: text/html; charset=utf-8")
+print()
+f_name=form["f_name"].value
+s_name=form["s_name"].value
+sex=form["myradio"].value
+job=form["job"].value
+
+
+print('<br>First name: ',f_name)
+print('<br>Second name: ',s_name)
+print('<br>Sex: ',sex)
+print('<br>Your job is: ',job)
 ```
 
 And:
