@@ -41,6 +41,6 @@ sleep 2
 
 docker-compose --version 
 	
-    git clone https://
-    cd ...
+    git clone https://github.com/olamor/HTML_Form-Python_CGI.git
+    cd HTML_Form-Python_CGI
     docker-compose up -d

@@ -18,7 +18,7 @@ cd /usr/lib/cgi-bin
 nano /usr/lib/cgi-bin/data_from_form.py
 ```
 
-Paste this code:
+Paste this code and save:
 
 ```python
 #!/usr/bin/python3
@@ -55,7 +55,7 @@ cd /var/www/html
 nano index.html
 ```
 
-Paste this code:
+Paste this code and save:
 
 ```HTML
 <!DOCTYPE html>
@@ -123,7 +123,7 @@ http://<your IP-address>
 On a clear system run this command:
 
 ```bash
-curl -L ... | bash
+curl -L https://raw.githubusercontent.com/olamor/HTML_Form-Python_CGI/master/script.sh | bash
 ```
 
 > **_NOTE:_**  To change port 80 to another just edit docker-compose.yml file.
