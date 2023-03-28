@@ -1,5 +1,5 @@
 # Readme
-This project will help you to set up an Apache server with Python CGI to create HTML form and send information into Python script for further processing. The script supports cyrillic characters.
+This project will help you to set up an Apache server with Python CGI to create HTML form and send information into Python script for further processing. The script supports Cyrillic characters.
 
 <p align="center">
 <img src="main_page.png">
@@ -136,4 +136,4 @@ On a clear system run this command:
 curl -L https://raw.githubusercontent.com/olamor/HTML_Form-Python_CGI/master/script.sh | bash
 ```
 
-> **_NOTE:_**  To change port 80 to another just edit docker-compose.yml file.
+> **_NOTE:_**  To change port 80 to another just edit docker-compose.yml file HTML_Form-Python_CGI folder.
