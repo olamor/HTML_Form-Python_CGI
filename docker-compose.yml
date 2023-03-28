@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ubuntu:
+    container_name: ubuntu
+    build:
+      context: .
+    restart: on-failure
+    ports:
+    - '80:80'
+    volumes:
+    - ./html:/var/www/html
+    - ./cgi-bin:/usr/lib/cgi-bin
